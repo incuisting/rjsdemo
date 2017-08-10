@@ -15,6 +15,7 @@ requirejs(['jquery', 'com/GoTop', 'com/Slidershow', 'com/WaterFull'], function($
     console.log('imgList', imgList);
     console.log('imgList[0]', $(imgList[0]));
     $(imgList[0]).load(function() {
+        console.log('要开始设置轮播了');
         new SliderShow($('.wrap'));
     })
 
