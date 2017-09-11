@@ -9222,8 +9222,8 @@ __WEBPACK_IMPORTED_MODULE_1_jquery___default()(function () {
         $loadMoreButton = $('.load-more'),
         WaterFullImage = $targetNode.find('img');
 
+    new WaterFull($container, $targetNode, $loadMoreButton);
     $(WaterFullImage[WaterFullImage.length - 1]).load(function () {
-        new WaterFull($container, $targetNode, $loadMoreButton);
         console.log('aa');
         //初始列表里的第一张图片加载完毕后开始瀑布流布局
     });
