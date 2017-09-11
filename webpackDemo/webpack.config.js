@@ -1,21 +1,30 @@
-var path = require('path');
+let HtmlWebpackPlugin = require('html-webpack-plugin'),
+    path = require('path');
 
 module.exports = {
-    entry: "./js/main.js", // string | object | array
+    entry: {
+        app: path.resolve(__dirname, 'src/js', 'main.js')
+    },
     output: {
-        // webpack 如何输出结果的相关选项
-
-        path: path.resolve(__dirname, "fianaldist"), // string
-        // 所有输出文件的目标路径
-        // 必须是绝对路径（使用 Node.js 的 path 模块）
-
-        filename: "bundle.js", // string
-        // 「入口分块(entry chunk)」的文件名模板（出口分块？）
-
-    }
-    // resolve: {
-    //     alias: {
-    //         jquery: path.resolve(__dirname, 'js/lib/jquery.js')
-    //     }
-    // }
-}
+        filename: '[name].js',
+        path: path.resolve(__dirname, 'dist')
+    },
+    module: {
+        rules: [{
+                test: /\.js$/,
+                loader: 'babel-loader',
+                include: path.resolve(__dirname, 'src/js')
+            },
+            {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            }
+        ]
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, 'src', 'index.html')
+                //src为index.html所在的文件夹
+        })
+    ]
+};

@@ -71,7 +71,7 @@ a {
 
 header {
     position: relative;
-    background-image: url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/header-bg.jpg);
+    background-image: url(http://ovurjb7rj.bkt.clouddn.com/header-bg.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -366,7 +366,7 @@ header .container>a {
     text-align: center;
 }
 
-#portfolio .load-more {
+.load-more {
     text-transform: uppercase;
     font-weight: bold;
     border-radius: 3px;
@@ -374,6 +374,7 @@ header .container>a {
     color: #fff;
     background: #fed136;
     border: none;
+    margin-bottom: 100px;
 }
 
 
@@ -540,7 +541,7 @@ header .container>a {
 footer {
     padding: 150px;
     background-color: #222;
-    background-image: url(http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/map-image.png);
+    background-image: url(http://ovurjb7rj.bkt.clouddn.com/map-image.png);
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -620,4 +621,14 @@ footer .block-title {
 
 #copyright>ul li {
     margin-left: 10px;
+}
+
+.gotop {
+    background: transparent;
+    border: 1px solid;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    line-height: 30px;
 }
