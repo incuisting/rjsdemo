@@ -9189,40 +9189,44 @@ return jQuery;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_css__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__style_css___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__style_css__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_jquery__);
 
 
-let $ = __webpack_require__(0),
-    GoTop = __webpack_require__(7),
-    SliderShow = __webpack_require__(8),
-    WaterFull = __webpack_require__(9);
+__WEBPACK_IMPORTED_MODULE_1_jquery___default()(function () {
+    let $ = __webpack_require__(0),
+        GoTop = __webpack_require__(7),
+        SliderShow = __webpack_require__(8),
+        WaterFull = __webpack_require__(9);
 
-let $sliderShowContainer = $('.wrap');
-// let imgHeight = $sliderShowContainer.height();
-// let imgWidth = $sliderShowContainer.width();
-// let imgCount = 1080;
-// let imgSrc = `https://unsplash.it/${imgWidth}/${imgHeight}/?image=${imgCount}`
+    let $sliderShowContainer = $('.wrap');
+    // let imgHeight = $sliderShowContainer.height();
+    // let imgWidth = $sliderShowContainer.width();
+    // let imgCount = 1080;
+    // let imgSrc = `https://unsplash.it/${imgWidth}/${imgHeight}/?image=${imgCount}`
 
 
-// let imgList = $sliderShowContainer.find('img');
-// console.log('imgList', imgList);
-// console.log('imgList[0]', $(imgList[0]));
-// $(imgList[0]).load(function() {
-//     //列表里的第一张图片加载完毕之后，为了得到图片的宽高
-//     console.log('要开始设置轮播了');
-// })
-new SliderShow($('.wrap'));
+    // let imgList = $sliderShowContainer.find('img');
+    // console.log('imgList', imgList);
+    // console.log('imgList[0]', $(imgList[0]));
+    // $(imgList[0]).load(function() {
+    //     //列表里的第一张图片加载完毕之后，为了得到图片的宽高
+    //     console.log('要开始设置轮播了');
+    // })
+    new SliderShow($('.wrap'));
 
-new GoTop($('body'));
+    new GoTop($('body'));
 
-let $container = $('.portfolio-list'),
-    $targetNode = $('.portfolio-list>li'),
-    $loadMoreButton = $('.load-more'),
-    WaterFullImage = $targetNode.find('img');
+    let $container = $('.portfolio-list'),
+        $targetNode = $('.portfolio-list>li'),
+        $loadMoreButton = $('.load-more'),
+        WaterFullImage = $targetNode.find('img');
 
-$(WaterFullImage[WaterFullImage.length - 1]).load(function () {
-    new WaterFull($container, $targetNode, $loadMoreButton);
-    console.log('aa');
-    //初始列表里的第一张图片加载完毕后开始瀑布流布局
+    $(WaterFullImage[WaterFullImage.length - 1]).load(function () {
+        new WaterFull($container, $targetNode, $loadMoreButton);
+        console.log('aa');
+        //初始列表里的第一张图片加载完毕后开始瀑布流布局
+    });
 });
 
 /***/ }),
